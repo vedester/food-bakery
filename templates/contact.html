@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Ages Food Bakery</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ages Food Bakery</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+        <li><a href="{{ url_for('shop') }}">Shop</a></li>
+        <li><a href="{{ url_for('contact') }}" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-hero">
+    <div class="contact-hero-content">
+      <h1>Contact Us</h1>
+      <p>We're here to help you with anything sweet!</p>
+    </div>
+  </section>
+
+  <section class="forms-section">
+    <div class="form-container">
+      <h2>Get in Touch</h2>
+      <form method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="form-container">
+      <h2>Quick Links</h2>
+      <p>Want to join or already a member?</p>
+      <p><a href="{{ url_for('signup') }}">Create an Account</a></p>
+      <p><a href="{{ url_for('login') }}">Sign In</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ages Food Bakery. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

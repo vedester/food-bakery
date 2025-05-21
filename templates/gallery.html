@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Ages Food Bakery</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <style>
+    .gallery {
+      padding: 2em;
+      text-align: center;
+    }
+
+    .gallery h2 {
+      margin-bottom: 1em;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ages Food Bakery</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+        <li><a href="{{ url_for('gallery') }}" class="active">Gallery</a></li>
+        <li><a href="{{ url_for('shop') }}">Shop</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <h2>Bakery Moments</h2>
+    <div class="gallery-grid">
+      <img src="{{url_for('static',filename='images/bakery shelf.jpeg')}}" alt="Bakery shelves">
+      <img src="{{url_for('static',filename='images/cupcake display.png')}}" alt="Cupcakes display">
+      <img src="{{url_for('static',filename='images/bakery counter.png')}}" alt="Bakery counter">
+      <img src="{{url_for('static',filename='images/bakery person.jpeg')}}" alt="Bakery chef at work">
+      <img src="{{url_for('static',filename='images/pasteries tray.jpeg')}}" alt="Pastries in trays">
+      <img src="{{url_for('static',filename='images/colourfull cake.jpeg')}}" alt="Colorful cake">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ages Food Bakery. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

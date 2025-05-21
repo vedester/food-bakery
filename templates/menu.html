@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu | Ages Food Bakery</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ages Food Bakery</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('menu') }}" class="active">Menu</a></li>
+        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+        <li><a href="{{ url_for('shop') }}">Shop</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menu Hero -->
+  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff');">
+    <div class="hero-content">
+      <h1>Our Menu</h1>
+      <p>Freshly baked treats made with love</p>
+    </div>
+  </section>
+
+  <!-- Menu Items -->
+  <section class="featured-products">
+    <h2>Popular Items</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="{{url_for('static',filename='images/Buttery Croissant.png')}}" alt="Croissant">
+        <h3>Butter Croissant</h3>
+        <p>$3.50</p>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Chocolate Cake">
+        <h3>Chocolate Cake</h3>
+        <p>$15.00</p>
+      </div>
+      <div class="product-card">
+        <img src="{{url_for('static', filename='images/strawberry tart.jpeg')}}" alt="Strawberry Tart">
+        <h3>Strawberry Tart</h3>
+        <p>$5.00</p>
+      </div>
+      <div class="product-card">
+        <img src="{{url_for('static', filename='images/french baguette.jpeg')}}" alt="Baguette">
+        <h3>French Baguette</h3>
+        <p>$2.00</p>
+      </div>
+      <div class="product-card">
+        <img src="{{url_for('static', filename='images/Vanilla Cupcakes with Sweet Buttercream Frosting.jpeg')}}" alt="Cupcake">
+        <h3>Vanilla Cupcake</h3>
+        <p>$2.50</p>
+      </div>
+      <div class="product-card">
+        <img src="{{url_for('static', filename='images/assorted macorons.jpeg')}}" alt="Macarons">
+        <h3>Assorted Macarons</h3>
+        <p>$8.00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ages Food Bakery. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

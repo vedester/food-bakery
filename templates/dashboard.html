@@ -1,0 +1,60 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | Ages Food Bakery</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ages Food Bakery</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+        <li><a href="{{ url_for('shop') }}">Shop</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Dashboard Content -->
+  <section class="dashboard">
+    <h1>Welcome, {{ name }}!</h1>
+    <p>Today is {{ date }}</p>
+
+    <div class="dashboard-widgets">
+      <div class="widget">
+        <h3>Your Profile</h3>
+        <p>Email: {{ email }}</p>
+        <a href="#">Update Profile</a>
+      </div>
+      
+      <div class="widget">
+        <h3>Order History</h3>
+        <p>You have 3 past orders.</p>
+        <a href="#">View Orders</a>
+      </div>
+      
+      <div class="widget">
+        <h3>Quick Actions</h3>
+        <button onclick="window.location.href='/menu';">Order Again</button>
+
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ages Food Bakery. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

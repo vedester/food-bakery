@@ -1,0 +1,99 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Ages Food Bakery</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" /> 
+   <!-- <link rel="stylesheet" href="static/styles.css" /> -->
+   
+   
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ages Food Bakery</div>
+      <ul class="nav-links">
+        <!-- {{ url_for('home') }}This is Flask's template language called Jinja2. Flask uses this to connect HTML pages with Python code -->
+        <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+        <li><a href="{{ url_for('shop') }}">Shop</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Freshly Baked Happiness</h1>
+      <p>Delicious, handmade treats just for you.</p>
+      <a href="#" class="cta-btn"><h2>Explore Menu</h2></a>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured-products">
+    <h2>Our Bestsellers</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="{{ url_for ('static', filename='images/chocolate_cake.png') }}" alt="Chocolate Cake">
+        <h3>Chocolate Delight Cake</h3>
+        <p>$25</p>
+      </div>
+      <div class="product-card">
+        <img src="{{url_for('static',filename='images/Buttery Croissant.png' )}}" alt="Croissant">
+        <h3>Buttery Croissant</h3>
+        <p>$4</p>
+      </div>
+      <div class="product-card">
+        <img src="{{url_for('static', filename ='images/Vanilla Cupcakes.png')}} "alt="Cupcakes">
+        <h3>Vanilla Cupcakes</h3>
+        <p>$12</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>
+        At Ages Food Bakery, we believe in making every bite count. From artisanal breads to decadent desserts, 
+        our bakery blends tradition with creativity. Come experience our passion for baking!
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>"The best bakery in town! Their chocolate cake is heavenly."</p>
+        <h4>- Sarah M.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I stop by every weekend for croissants. Flaky and perfect!"</p>
+        <h4>- James K.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Great service and amazing pastries. Highly recommend!"</p>
+        <h4>- Linda T.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    
+    <p>&copy; 2025 Ages Food Bakery. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
